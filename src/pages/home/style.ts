@@ -20,6 +20,8 @@ export const HomeStyled = styled.div`
     padding-right: 0;
     gap: 1rem;
     padding-bottom: 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 
   & > h2 {
