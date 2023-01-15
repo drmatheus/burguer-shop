@@ -47,7 +47,7 @@ export function AuthProvider({ children }: IAuthContext) {
   const [isLoading, setIsLoading] = useState(true);
   const [menu, setMenu] = useState([] as IMenu[]);
   const [, setUserData] = useState({} as IUser);
-  const [filterMenu, setFilterMenu] = useState("Todos");
+  const [filterMenu, setFilterMenu] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export function AuthProvider({ children }: IAuthContext) {
   }, []);
 
   function filter() {
-    if (filterMenu === "Todos" || filterMenu.trim().length >= 0) {
+    if (filterMenu.trim().length >= 0) {
       return menu;
     } else {
       const newMenu = menu.filter((e) => {
